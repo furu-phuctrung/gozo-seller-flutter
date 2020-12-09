@@ -1,1 +1,3 @@
-class HeightConstant {}
+class HeightConstant {
+  static double dashboardWidget = 600;
+}
