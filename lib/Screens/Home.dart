@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
 import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
+import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
 import 'package:gozo_flutter/Constants/PaddingConstant.dart';
 
 class Home extends StatelessWidget {
@@ -16,7 +17,7 @@ class Home extends StatelessWidget {
                 'Cửa hàng của bạn',
                 style: TextStyle(
                     fontSize: FontSizeConstant.largeTitle,
-                    fontWeight: FontWeight.bold),
+                    fontWeight: FontWeightConstant.title),
               ),
               Container(
                 padding: EdgeInsets.all(PaddingConstant.medium),
@@ -37,7 +38,9 @@ class Home extends StatelessWidget {
                 child: RaisedButton(
                   padding: EdgeInsets.all(PaddingConstant.medium),
                   color: ColorConstant.primary,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacementNamed(context, '/dashboard');
+                  },
                   shape: CircleBorder(),
                   child: Icon(
                     Icons.arrow_forward_ios,

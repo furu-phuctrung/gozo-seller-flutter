@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
+import 'package:gozo_flutter/Screens/Dashboard.dart';
 import 'package:gozo_flutter/Screens/Home.dart';
 import 'package:gozo_flutter/Screens/Login.dart';
 
@@ -14,7 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gozo Seller',
       debugShowCheckedModeBanner: false,
-      routes: {'/login': (context) => Login(), '/': (context) => Home()},
+      routes: {
+        '/login': (context) => Login(),
+        '/': (context) => Home(),
+        '/dashboard':(context) => Dashboard()},
       initialRoute: '/',
       theme: ThemeData(primaryColor: ColorConstant.primary),
     );

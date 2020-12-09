@@ -1,1 +1,3 @@
-class WidthConstant {}
+class WidthConstant {
+  static double dashboardWidget = 500;
+}

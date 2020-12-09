@@ -1,1 +1,3 @@
-class ShadowBlurConstant {}
+class ShadowBlurConstant {
+  static double widget = 10;
+}
