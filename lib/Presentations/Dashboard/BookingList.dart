@@ -8,7 +8,6 @@ import 'package:gozo_flutter/Constants/HeightConstant.dart';
 import 'package:gozo_flutter/Constants/RadiusConstant.dart';
 import 'package:gozo_flutter/Constants/ShadowBlurConstant.dart';
 import 'package:gozo_flutter/Constants/WidthConstant.dart';
-import 'package:gozo_flutter/Events/DashoardEvent.dart';
 import 'package:gozo_flutter/States/DashboardState.dart';
 
 import 'BookingItems.dart';

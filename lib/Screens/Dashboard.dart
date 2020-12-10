@@ -7,6 +7,7 @@ import 'package:gozo_flutter/Constants/PaddingConstant.dart';
 import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Presentations/Dashboard/BookingList.dart';
 import 'package:gozo_flutter/States/DashboardState.dart';
+import 'package:gozo_flutter/Widgets/Authentication.dart';
 
 class Dashboard extends StatelessWidget {
   @override
@@ -30,13 +31,16 @@ class Dashboard extends StatelessWidget {
               child: BlocBuilder <DashboardBloc,DashboardState>(
                 builder: (context, state){
                   if(state is UnloadedDashboard) return CircularProgressIndicator();
-                  return Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: SpacingConstant.large,
-                    runSpacing: SpacingConstant.large,
-                    children: [
-                      BookingList()
-                    ],
+                  return Authentication(
+                    authorized: true,
+                    child: Wrap(
+                      crossAxisAlignment: WrapCrossAlignment.center,
+                      spacing: SpacingConstant.large,
+                      runSpacing: SpacingConstant.large,
+                      children: [
+                        BookingList()
+                      ],
+                    ),
                   );
                 }
               ),
