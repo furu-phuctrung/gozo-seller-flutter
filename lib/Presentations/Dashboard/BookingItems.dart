@@ -4,26 +4,28 @@ import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
 import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
 import 'package:gozo_flutter/Constants/PaddingConstant.dart';
 import 'package:gozo_flutter/Models/Booking.dart';
+import 'package:timeago/timeago.dart';
 
 class BookingItem extends StatelessWidget{
-  final Booking booking = null;
+  final Booking booking ;
+  BookingItem(this.booking);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: PaddingConstant.medium),
+      padding: EdgeInsets.all(PaddingConstant.medium),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Table 1',
+            "${booking.table}",
             style:
             TextStyle(
                 fontWeight: FontWeightConstant.smallerTitle,
                 fontSize: FontSizeConstant.smallTitle),
           ),
           Text(
-            'One minutes ago',
+            "${format(booking.createdAt,locale: 'vn')}",
             style: TextStyle(
               fontSize: FontSizeConstant.annotation,
               fontStyle: FontStyle.italic,
