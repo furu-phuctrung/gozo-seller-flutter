@@ -7,6 +7,7 @@ import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/BookingList.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Middlewares/Authentication.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderList.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -38,7 +39,7 @@ class DashboardScreen extends StatelessWidget {
                     crossAxisAlignment: WrapCrossAlignment.center,
                     spacing: SpacingConstant.large,
                     runSpacing: SpacingConstant.large,
-                    children: [BookingList()],
+                    children: [BookingList(), OrderList()],
                   ),
                 );
               }),

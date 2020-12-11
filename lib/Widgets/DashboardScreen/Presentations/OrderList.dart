@@ -8,11 +8,12 @@ import 'package:gozo_flutter/Constants/RadiusConstant.dart';
 import 'package:gozo_flutter/Constants/ShadowBlurConstant.dart';
 import 'package:gozo_flutter/Constants/WidthConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderItem.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
 import 'BookingItem.dart';
 
-class BookingList extends StatelessWidget {
+class OrderList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final DashboardBloc bloc = BlocProvider.of<DashboardBloc>(context);
@@ -37,7 +38,7 @@ class BookingList extends StatelessWidget {
                     topLeft: Radius.circular(RadiusConstant.widgetBorder),
                     topRight: Radius.circular(RadiusConstant.widgetBorder))),
             title: Text(
-              'Bàn đang chờ',
+              'Đơn đang xử lý',
               style: TextStyle(
                   fontWeight: FontWeightConstant.title,
                   fontSize: FontSizeConstant.title,
@@ -47,8 +48,8 @@ class BookingList extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildBuilderDelegate((context, index) {
-            return BookingItem((state as LoadedDashboard).bookings[index]);
-          }, childCount: (state as LoadedDashboard).bookings.length)),
+            return OrderItem((state as LoadedDashboard).orderLineItems[index]);
+          }, childCount: (state as LoadedDashboard).orderLineItems.length)),
         ]);
       }),
     );
