@@ -3,7 +3,7 @@ import 'package:gozo_flutter/Constants/ColorConstant.dart';
 import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
 import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
 import 'package:gozo_flutter/Constants/PaddingConstant.dart';
-import 'package:gozo_flutter/Models/Booking.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/Booking.dart';
 import 'package:timeago/timeago.dart';
 
 class BookingItem extends StatelessWidget{

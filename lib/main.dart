@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
-import 'package:gozo_flutter/Screens/Dashboard.dart';
-import 'package:gozo_flutter/Screens/Home.dart';
-import 'package:gozo_flutter/Screens/Login.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/DashboardScreen.dart';
+import 'package:gozo_flutter/Widgets/HomeScreen/HomeScreen.dart';
+import 'package:gozo_flutter/Widgets/LoginScreen/Login.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => Login(),
         '/': (context) => Home(),
-        '/dashboard':(context) => Dashboard()},
+        '/dashboard':(context) => DashboardScreen()},
       initialRoute: '/',
       theme: ThemeData(primaryColor: ColorConstant.primary),
     );

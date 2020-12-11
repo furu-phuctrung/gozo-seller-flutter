@@ -1,6 +1,5 @@
 import 'dart:convert';
-
-import 'package:gozo_flutter/Models/BaseModel.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/BaseModel.dart';
 import 'package:http/http.dart';
 
 abstract class BaseRepository<Model extends BaseModel>{

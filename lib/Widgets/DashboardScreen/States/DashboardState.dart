@@ -1,4 +1,4 @@
-import 'package:gozo_flutter/Models/Booking.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/Booking.dart';
 
 abstract class DashboardState{
 

@@ -1,4 +1,5 @@
-import 'package:gozo_flutter/Models/BaseModel.dart';
+
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/BaseModel.dart';
 
 class Booking extends BaseModel{
   DateTime createdAt;

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gozo_flutter/Blocs/DashboardBloc.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
 import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
 import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
@@ -8,7 +7,8 @@ import 'package:gozo_flutter/Constants/HeightConstant.dart';
 import 'package:gozo_flutter/Constants/RadiusConstant.dart';
 import 'package:gozo_flutter/Constants/ShadowBlurConstant.dart';
 import 'package:gozo_flutter/Constants/WidthConstant.dart';
-import 'package:gozo_flutter/States/DashboardState.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
 import 'BookingItems.dart';
 

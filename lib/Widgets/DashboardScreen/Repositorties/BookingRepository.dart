@@ -1,6 +1,5 @@
-
-import 'package:gozo_flutter/Models/Booking.dart';
-import 'BaseRepository.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/Booking.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Repositorties/BaseRepository.dart';
 
 
 class BookingRepository extends BaseRepository<Booking>{

@@ -1,8 +1,9 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gozo_flutter/Events/DashoardEvent.dart';
-import 'package:gozo_flutter/Models/Booking.dart';
-import 'package:gozo_flutter/Repositorties/BookingRepository.dart';
-import 'package:gozo_flutter/States/DashboardState.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Events/DashoardEvent.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Models/Booking.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Repositorties/BookingRepository.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
+
 
 class DashboardBloc extends Bloc<DashboardEvent,DashboardState>{
   BookingRepository bookingRepository = BookingRepository();
