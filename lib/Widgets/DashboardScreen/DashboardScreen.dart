@@ -11,7 +11,7 @@ import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderList.dar
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
 class DashboardScreen extends StatelessWidget {
-  final List<Widget> tabViews = [BookingList(), OrderList()];
+  final List<Widget> tabViews = [OrderList(), BookingList()];
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +32,8 @@ class DashboardScreen extends StatelessWidget {
                 iconTheme: IconThemeData(color: Colors.white),
                 bottom: TabBar(
                   tabs: [
-                    Tab(icon: Icon(Icons.notes_rounded)),
                     Tab(icon: Icon(Icons.table_view)),
+                    Tab(icon: Icon(Icons.notes_rounded)),
                   ],
                 ),
               ),

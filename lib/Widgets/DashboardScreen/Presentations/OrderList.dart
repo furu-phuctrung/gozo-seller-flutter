@@ -17,34 +17,8 @@ class OrderList extends StatelessWidget {
     // final DashboardBloc bloc = BlocProvider.of<DashboardBloc>(context);
 
     return Container(
-      width: WidthConstant.dashboardWidget,
-      height: HeightConstant.dashboardWidget,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(RadiusConstant.widgetBorder),
-          color: ColorConstant.widgetBackground,
-          boxShadow: [
-            BoxShadow(
-              color: ColorConstant.shadow,
-              blurRadius: ShadowBlurConstant.widget,
-            ),
-          ]),
       child: BlocBuilder<DashboardBloc, DashboardState>(builder: (_, state) {
         return CustomScrollView(slivers: [
-          SliverAppBar(
-            automaticallyImplyLeading: false,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(RadiusConstant.widgetBorder),
-                    topRight: Radius.circular(RadiusConstant.widgetBorder))),
-            title: Text(
-              'Đơn đang xử lý',
-              style: TextStyle(
-                  fontWeight: FontWeightConstant.title,
-                  fontSize: FontSizeConstant.title,
-                  color: Colors.white),
-            ),
-            pinned: true,
-          ),
           SliverList(
               delegate: SliverChildBuilderDelegate((context, index) {
             return OrderItem((state as LoadedDashboard).orderLineItems[index]);

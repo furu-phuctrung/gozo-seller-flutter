@@ -18,15 +18,6 @@ class BookingList extends StatelessWidget {
     // final DashboardBloc bloc = BlocProvider.of<DashboardBloc>(context);
 
     return Container(
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(RadiusConstant.widgetBorder),
-          color: ColorConstant.widgetBackground,
-          boxShadow: [
-            BoxShadow(
-              color: ColorConstant.shadow,
-              blurRadius: ShadowBlurConstant.widget,
-            ),
-          ]),
       child: BlocBuilder<DashboardBloc, DashboardState>(builder: (_, state) {
         return CustomScrollView(slivers: [
           SliverList(

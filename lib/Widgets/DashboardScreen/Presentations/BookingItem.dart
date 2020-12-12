@@ -3,6 +3,7 @@ import 'package:gozo_flutter/Constants/ColorConstant.dart';
 import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
 import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
 import 'package:gozo_flutter/Constants/PaddingConstant.dart';
+import 'package:gozo_flutter/Constants/RadiusConstant.dart';
 import 'package:gozo_flutter/Constants/ShadowBlurConstant.dart';
 import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Models/Booking.dart';
@@ -18,6 +19,7 @@ class BookingItem extends StatelessWidget {
       padding: EdgeInsets.all(PaddingConstant.large),
       child: Container(
         decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(RadiusConstant.widgetBorder),
             color: ColorConstant.widgetBackground,
             boxShadow: [
               BoxShadow(
@@ -27,7 +29,6 @@ class BookingItem extends StatelessWidget {
         padding: EdgeInsets.all(PaddingConstant.medium),
         child: Wrap(
           alignment: WrapAlignment.spaceEvenly,
-          runAlignment: WrapAlignment.end,
           spacing: SpacingConstant.medium,
           runSpacing: SpacingConstant.medium,
           children: [
