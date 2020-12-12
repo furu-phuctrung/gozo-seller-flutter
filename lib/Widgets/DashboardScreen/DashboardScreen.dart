@@ -6,7 +6,6 @@ import 'package:gozo_flutter/Constants/PaddingConstant.dart';
 import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/BookingList.dart';
-import 'package:gozo_flutter/Widgets/DashboardScreen/Middlewares/Authentication.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderList.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
@@ -33,14 +32,11 @@ class DashboardScreen extends StatelessWidget {
                   builder: (context, state) {
                 if (state is UnloadedDashboard)
                   return CircularProgressIndicator();
-                return Authentication(
-                  authorized: true,
-                  child: Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    spacing: SpacingConstant.large,
-                    runSpacing: SpacingConstant.large,
-                    children: [BookingList(), OrderList()],
-                  ),
+                return Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: SpacingConstant.large,
+                  runSpacing: SpacingConstant.large,
+                  children: [BookingList(), OrderList()],
                 );
               }),
             ),

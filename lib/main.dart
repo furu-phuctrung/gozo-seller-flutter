@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
+import 'package:gozo_flutter/Widgets/Authentication/Authentication.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/DashboardScreen.dart';
 import 'package:gozo_flutter/Widgets/HomeScreen/HomeScreen.dart';
 import 'package:gozo_flutter/Widgets/LoginScreen/Login.dart';
@@ -18,9 +19,16 @@ class MyApp extends StatelessWidget {
       routes: {
         '/login': (context) => Login(),
         '/': (context) => Home(),
-        '/dashboard':(context) => DashboardScreen()},
+        '/dashboard': (context) => DashboardScreen()
+      },
       initialRoute: '/',
       theme: ThemeData(primaryColor: ColorConstant.primary),
+      builder: (_, widget) {
+        return Authentication(
+          authorized: true,
+          child: widget,
+        );
+      },
     );
   }
 }

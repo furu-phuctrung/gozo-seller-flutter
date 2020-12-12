@@ -11,8 +11,6 @@ import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderItem.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
-import 'BookingItem.dart';
-
 class OrderList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
