@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: ConfiguationConstant.routes,
       initialRoute: '/',
-      theme: ThemeData(primaryColor: ColorConstant.primary),
+      theme: ThemeData(
+          tabBarTheme: TabBarTheme(labelColor: Colors.white),
+          primaryColor: ColorConstant.primary),
       builder: (_, widget) {
         return Authentication(
           authorized: true,

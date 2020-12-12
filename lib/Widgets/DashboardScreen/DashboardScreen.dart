@@ -11,40 +11,43 @@ import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderList.dar
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
 
 class DashboardScreen extends StatelessWidget {
+  final List<Widget> tabViews = [BookingList(), OrderList()];
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: AppDrawer(),
-      appBar: AppBar(
-          title: Text(
-            'GOZO',
-            style: TextStyle(
-                fontSize: FontSizeConstant.title,
-                fontWeight: FontWeightConstant.title,
-                color: Colors.white),
-          ),
-          iconTheme: IconThemeData(color: Colors.white)),
-      body: BlocProvider(
+    return BlocProvider(
         create: (_) => DashboardBloc(),
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.all(PaddingConstant.large),
-            child: Center(
-              child: BlocBuilder<DashboardBloc, DashboardState>(
-                  builder: (context, state) {
-                if (state is UnloadedDashboard)
-                  return CircularProgressIndicator();
-                return Wrap(
-                  crossAxisAlignment: WrapCrossAlignment.center,
-                  spacing: SpacingConstant.large,
-                  runSpacing: SpacingConstant.large,
-                  children: [BookingList(), OrderList()],
-                );
-              }),
-            ),
-          ),
-        ),
-      ),
-    );
+        child: DefaultTabController(
+            length: 2,
+            child: Scaffold(
+              drawer: AppDrawer(),
+              appBar: AppBar(
+                title: Text(
+                  'GOZO',
+                  style: TextStyle(
+                      fontSize: FontSizeConstant.title,
+                      fontWeight: FontWeightConstant.title,
+                      color: Colors.white),
+                ),
+                iconTheme: IconThemeData(color: Colors.white),
+                bottom: TabBar(
+                  tabs: [
+                    Tab(icon: Icon(Icons.notes_rounded)),
+                    Tab(icon: Icon(Icons.table_view)),
+                  ],
+                ),
+              ),
+              body: TabBarView(
+                  children: tabViews
+                      .map((widget) => Center(
+                            child: BlocBuilder<DashboardBloc, DashboardState>(
+                                builder: (context, state) {
+                              if (state is UnloadedDashboard)
+                                return CircularProgressIndicator();
+                              return widget;
+                            }),
+                          ))
+                      .toList()),
+            )));
   }
 }
