@@ -31,6 +31,7 @@ class OrderList extends StatelessWidget {
       child: BlocBuilder<DashboardBloc, DashboardState>(builder: (_, state) {
         return CustomScrollView(slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(RadiusConstant.widgetBorder),

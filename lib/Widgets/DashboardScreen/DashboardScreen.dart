@@ -5,6 +5,7 @@ import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
 import 'package:gozo_flutter/Constants/PaddingConstant.dart';
 import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
+import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/AppDrawer.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/BookingList.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/OrderList.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/States/DashboardState.dart';
@@ -13,15 +14,16 @@ class DashboardScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: AppDrawer(),
       appBar: AppBar(
-        title: Text(
-          'GOZO',
-          style: TextStyle(
-              fontSize: FontSizeConstant.title,
-              fontWeight: FontWeightConstant.title,
-              color: Colors.white),
-        ),
-      ),
+          title: Text(
+            'GOZO',
+            style: TextStyle(
+                fontSize: FontSizeConstant.title,
+                fontWeight: FontWeightConstant.title,
+                color: Colors.white),
+          ),
+          iconTheme: IconThemeData(color: Colors.white)),
       body: BlocProvider(
         create: (_) => DashboardBloc(),
         child: SingleChildScrollView(

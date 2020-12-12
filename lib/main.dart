@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gozo_flutter/Constants/ColorConstant.dart';
+import 'package:gozo_flutter/Constants/ConfigurationConstant.dart';
 import 'package:gozo_flutter/Widgets/Authentication/Authentication.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/DashboardScreen.dart';
 import 'package:gozo_flutter/Widgets/HomeScreen/HomeScreen.dart';
@@ -16,11 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Gozo Seller',
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/login': (context) => Login(),
-        '/': (context) => Home(),
-        '/dashboard': (context) => DashboardScreen()
-      },
+      routes: ConfiguationConstant.routes,
       initialRoute: '/',
       theme: ThemeData(primaryColor: ColorConstant.primary),
       builder: (_, widget) {
