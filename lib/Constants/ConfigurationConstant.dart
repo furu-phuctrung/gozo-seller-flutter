@@ -7,7 +7,8 @@ class ConfiguationConstant {
   static final Map<String, Widget Function(BuildContext)> routes = {
     '/login': (context) => Login(),
     '/': (context) => Home(),
-    '/dashboard': (context) => DashboardScreen()
+    '/dashboard': (context) => DashboardScreen(),
+    '/debug': (context) => DashboardScreen()
   };
 
   static final Map<String, String> navigatorLabel = {
