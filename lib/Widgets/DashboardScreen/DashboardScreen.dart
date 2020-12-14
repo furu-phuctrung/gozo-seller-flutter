@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gozo_flutter/Constants/FontSizeConstant.dart';
 import 'package:gozo_flutter/Constants/FontWeightConstant.dart';
-import 'package:gozo_flutter/Constants/PaddingConstant.dart';
-import 'package:gozo_flutter/Constants/SpacingConstant.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Blocs/DashboardBloc.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/AppDrawer.dart';
 import 'package:gozo_flutter/Widgets/DashboardScreen/Presentations/BookingList.dart';
